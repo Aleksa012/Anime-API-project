@@ -1,0 +1,222 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+// HEADER
+
+header {
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aquamarine;
+
+  .logo {
+    font-size: 3rem;
+    color: #fff;
+  }
+
+  .nav {
+    &_list {
+      list-style: none;
+      display: flex;
+    }
+    &_item {
+      cursor: pointer;
+      padding: 0.5rem 1.5rem;
+      margin: 0 0.5rem;
+      transition: all 0.4s ease;
+
+      &:hover {
+        background-color: black;
+        color: #fff;
+      }
+    }
+  }
+
+  .search_input {
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.856);
+    box-shadow: 0 1rem 5rem black;
+  }
+}
+
+// CONTENT
+
+.content {
+  overflow-x: hidden;
+  background-color: black;
+  height: 70rem;
+  position: relative;
+
+  .slider {
+    background-color: transparent;
+    position: absolute;
+    top: 2rem;
+    z-index: 111;
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    button {
+      margin-left: 5rem;
+      padding: 1rem 3rem;
+    }
+  }
+
+  .container {
+    background-color: black;
+    height: 40rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-out;
+    position: relative;
+
+    .card_container {
+      position: relative;
+      background-color: black;
+      height: 20rem;
+
+      &:hover {
+        .card_front {
+          z-index: 0;
+        }
+        .card_front img {
+          transform: scale(1.1);
+          filter: blur(2px);
+          position: relative;
+        }
+      }
+
+      .card_front {
+        background-color: transparent;
+        height: 25rem;
+        width: 20rem;
+        margin: 0 3rem;
+        position: relative;
+        z-index: 1;
+        img {
+          height: 100%;
+          width: 100%;
+          transition: all 0.3s ease;
+        }
+      }
+      .card_back {
+        background-color: transparent;
+        height: 20rem;
+        width: 20rem;
+        margin: 0 3rem;
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        span {
+          margin-bottom: 2rem;
+          font-size: 2rem;
+          color: #fff;
+          border-bottom: 2px solid red;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// HERO
+
+.hero {
+  background-color: rgb(0, 0, 0);
+  height: 80rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 0;
+  .anime_info {
+    width: 40%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 5rem white;
+
+    h1 {
+      font-size: 4rem;
+      width: 20rem;
+    }
+
+    p {
+      width: 50rem;
+      font-size: 1.5rem;
+    }
+  }
+  .anime_image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 70rem;
+    }
+  }
+}
+
+// MY ANIME
+
+.watch_later {
+  color: #fff;
+  background-color: #000;
+  height: 10rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_anime {
+  color: #fff;
+  font-size: 5rem;
+  height: 30rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid grey;
+  border-left: none;
+}
+
+// CONTENT MANIPULATION CLASSES
+
+.slided {
+  transform: translateX(-89rem);
+}

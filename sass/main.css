@@ -1,0 +1,278 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+header {
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: aquamarine;
+}
+
+header .logo {
+  font-size: 3rem;
+  color: #fff;
+}
+
+header .nav_list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav_item {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+header .nav_item:hover {
+  background-color: black;
+  color: #fff;
+}
+
+header .search_input {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.856);
+  -webkit-box-shadow: 0 1rem 5rem black;
+          box-shadow: 0 1rem 5rem black;
+}
+
+.content {
+  overflow-x: hidden;
+  background-color: black;
+  height: 70rem;
+  position: relative;
+}
+
+.content .slider {
+  background-color: transparent;
+  position: absolute;
+  top: 2rem;
+  z-index: 111;
+  width: 100vw;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .slider button {
+  margin-left: 5rem;
+  padding: 1rem 3rem;
+}
+
+.content .container {
+  background-color: black;
+  height: 40rem;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: relative;
+}
+
+.content .container .card_container {
+  position: relative;
+  background-color: black;
+  height: 20rem;
+}
+
+.content .container .card_container:hover .card_front {
+  z-index: 0;
+}
+
+.content .container .card_container:hover .card_front img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  position: relative;
+}
+
+.content .container .card_container .card_front {
+  background-color: transparent;
+  height: 25rem;
+  width: 20rem;
+  margin: 0 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content .container .card_container .card_front img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.content .container .card_container .card_back {
+  background-color: transparent;
+  height: 20rem;
+  width: 20rem;
+  margin: 0 3rem;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .container .card_container .card_back span {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 2px solid red;
+  cursor: pointer;
+}
+
+.hero {
+  background-color: black;
+  height: 80rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 4rem 0;
+}
+
+.hero .anime_info {
+  width: 40%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-shadow: 0 0 5rem white;
+          box-shadow: 0 0 5rem white;
+}
+
+.hero .anime_info h1 {
+  font-size: 4rem;
+  width: 20rem;
+}
+
+.hero .anime_info p {
+  width: 50rem;
+  font-size: 1.5rem;
+}
+
+.hero .anime_image {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .anime_image img {
+  height: 70rem;
+}
+
+.watch_later {
+  color: #fff;
+  background-color: #000;
+  height: 10rem;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my_anime {
+  color: #fff;
+  font-size: 5rem;
+  height: 30rem;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid grey;
+  border-left: none;
+}
+
+.slided {
+  -webkit-transform: translateX(-89rem);
+          transform: translateX(-89rem);
+}
+/*# sourceMappingURL=main.css.map */
