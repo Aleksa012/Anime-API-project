@@ -204,10 +204,11 @@ header {
 
     img {
       height: 70rem;
-      width: 70rem;
-      border-radius: 10000px;
+      width: 50rem;
       box-shadow: 0 0 100px 40px white;
       opacity: 0.3;
+      border: 5px solid #fff;
+      border-top: none;
     }
   }
 }
