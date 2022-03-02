@@ -31,7 +31,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: aquamarine;
+  background-color: rgb(0, 0, 0);
 
   .logo {
     font-size: 3rem;
@@ -48,10 +48,11 @@ header {
       padding: 0.5rem 1.5rem;
       margin: 0 0.5rem;
       transition: all 0.4s ease;
+      color: #fff;
 
       &:hover {
-        background-color: black;
-        color: #fff;
+        background-color: #fff;
+        color: #000;
       }
     }
   }
@@ -83,25 +84,37 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border-bottom: 2px solid #333;
 
     button {
-      margin-left: 5rem;
-      padding: 1rem 3rem;
+      margin: 0 0 2rem 5rem;
+      padding: 0 2rem;
+      font-size: 2rem;
+      border: 1px solid #000;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      color: #fff;
+      background-color: #000;
+      border: 1px solid #fff;
+      transform: scaleX(1.5);
     }
   }
 
   .container {
-    background-color: black;
+    background-color: #fff;
     height: 40rem;
-    width: 100vw;
+    width: 270rem;
     display: flex;
     align-items: center;
     transition: all 0.5s ease-out;
     position: relative;
+    border: 2px solid #333;
 
     .card_container {
       position: relative;
-      background-color: black;
+      background-color: #fff;
       height: 20rem;
 
       &:hover {
@@ -141,11 +154,13 @@ header {
         align-items: center;
 
         span {
+          background-color: transparent;
           margin-bottom: 2rem;
           font-size: 2rem;
           color: #fff;
           border-bottom: 2px solid red;
           cursor: pointer;
+          height: 3rem;
         }
       }
     }
@@ -168,7 +183,8 @@ header {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    box-shadow: 0 0 5rem white;
+    border: 2px solid white;
+    border-top: none;
 
     h1 {
       font-size: 4rem;
@@ -185,8 +201,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
       height: 70rem;
+      width: 70rem;
+      border-radius: 10000px;
+      box-shadow: 0 0 100px 40px white;
+      opacity: 0.3;
     }
   }
 }
@@ -207,12 +228,12 @@ header {
   color: #fff;
   font-size: 5rem;
   height: 30rem;
-  width: 100vw;
+  width: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   border: 2px solid grey;
   border-left: none;
+  padding: 0 20rem;
 }
 
 // CONTENT MANIPULATION CLASSES

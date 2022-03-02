@@ -34,7 +34,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: aquamarine;
+  background-color: black;
 }
 
 header .logo {
@@ -55,11 +55,12 @@ header .nav_item {
   margin: 0 0.5rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  color: #fff;
 }
 
 header .nav_item:hover {
-  background-color: black;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 header .search_input {
@@ -94,17 +95,30 @@ header .search_input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 2px solid #333;
 }
 
 .content .slider button {
-  margin-left: 5rem;
-  padding: 1rem 3rem;
+  margin: 0 0 2rem 5rem;
+  padding: 0 2rem;
+  font-size: 2rem;
+  border: 1px solid #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.content .slider button:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
 }
 
 .content .container {
-  background-color: black;
+  background-color: #fff;
   height: 40rem;
-  width: 100vw;
+  width: 270rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,11 +128,12 @@ header .search_input {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   position: relative;
+  border: 2px solid #333;
 }
 
 .content .container .card_container {
   position: relative;
-  background-color: black;
+  background-color: #fff;
   height: 20rem;
 }
 
@@ -173,11 +188,13 @@ header .search_input {
 }
 
 .content .container .card_container .card_back span {
+  background-color: transparent;
   margin-bottom: 2rem;
   font-size: 2rem;
   color: #fff;
   border-bottom: 2px solid red;
   cursor: pointer;
+  height: 3rem;
 }
 
 .hero {
@@ -207,8 +224,8 @@ header .search_input {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-shadow: 0 0 5rem white;
-          box-shadow: 0 0 5rem white;
+  border: 2px solid white;
+  border-top: none;
 }
 
 .hero .anime_info h1 {
@@ -236,6 +253,11 @@ header .search_input {
 
 .hero .anime_image img {
   height: 70rem;
+  width: 70rem;
+  border-radius: 10000px;
+  -webkit-box-shadow: 0 0 100px 40px white;
+          box-shadow: 0 0 100px 40px white;
+  opacity: 0.3;
 }
 
 .watch_later {
@@ -258,17 +280,16 @@ header .search_input {
   color: #fff;
   font-size: 5rem;
   height: 30rem;
-  width: 100vw;
+  width: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border: 2px solid grey;
   border-left: none;
+  padding: 0 20rem;
 }
 
 .slided {

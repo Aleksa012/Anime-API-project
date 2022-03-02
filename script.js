@@ -21,7 +21,7 @@ const template = function (img, id, type) {
  <div class="card_back">
  <span id="${id}" class="more">See More!</span>
  <span id="${id}" class="${type}">${
-    type[0].toUpperCase() + type.slice(1)
+    type[0].toUpperCase() + type.slice(1).replace("_", " ")
   }!</span>
  </div>
 </div>
@@ -40,7 +40,7 @@ const loadTopAnime = async function (url) {
     top10.forEach((anime) => {
       animeContainer.insertAdjacentHTML(
         "beforeend",
-        template(anime.image_url, anime.mal_id, "add")
+        template(anime.image_url, anime.mal_id, "watch_later")
       );
     });
 
@@ -63,7 +63,7 @@ const searchedAnime = async function (url, query) {
     data.results.forEach((anime) => {
       animeContainer.insertAdjacentHTML(
         "beforeend",
-        template(anime.image_url, anime.mal_id, "add")
+        template(anime.image_url, anime.mal_id, "watch_later")
       );
     });
     animeContainer.classList.remove("slided");
@@ -95,7 +95,7 @@ animeContainer.addEventListener("click", function (e) {
   if (e.target.classList.contains("more")) {
     showAnimeInfo(e.target.id);
   }
-  if (e.target.classList.contains("add")) {
+  if (e.target.classList.contains("watch_later")) {
     if (storedAnime.length === 5) return;
 
     if (localStorage.getItem(`anime${e.target.id}`)) return;
